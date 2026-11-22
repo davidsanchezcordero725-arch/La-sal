@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Restaurante La Sal · Isla Cristina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f5;--surface:#fff;--ink:#0c2c3f;--muted:#4d6573;--sea:#0c2c3f;--sea-ink:#eef5f4;--accent:#1d7a8c;--brine:#c4566b;--line:#d3dedc;--free:#2c8a62;--res:#c8921a;--occ:#b3413b;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081c29;--surface:#0f3042;--ink:#eaf2f1;--muted:#a3bbc4;--sea:#04131c;--accent:#4fb3c4;--brine:#e58497;--line:#1d4558;--free:#4fc08f;--res:#e3b043;--occ:#e0706a}}
+:root[data-theme="dark"]{--bg:#081c29;--surface:#0f3042;--ink:#eaf2f1;--muted:#a3bbc4;--sea:#04131c;--accent:#4fb3c4;--brine:#e58497;--line:#1d4558;--free:#4fc08f;--res:#e3b043;--occ:#e0706a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 20% 30%,rgba(140,175,188,.3) 0 1.4px,transparent 2px) 0 0/90px 90px,radial-gradient(circle at 70% 65%,rgba(140,175,188,.22) 0 1px,transparent 1.6px) 0 0/130px 130px,var(--bg);color:var(--ink);font:400 17px/1.6 Karla,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--sea);color:var(--sea-ink);padding:10px 0}
+nav .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+nav b{font-family:Fraunces,Georgia,serif;font-size:20px}
+nav div a{margin-left:14px;text-decoration:none;font-size:15px}
+.hero{background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.4) 0 1.5px,transparent 2.2px) 0 0/90px 90px,radial-gradient(circle at 70% 65%,rgba(255,255,255,.25) 0 1px,transparent 1.8px) 0 0/130px 130px,var(--sea);color:var(--sea-ink);padding:56px 0 0;overflow:hidden}
+.hero{position:relative}
+.hero .wrap{position:relative;z-index:2}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='120'%3E%3Cg fill='%231d7a8c' opacity='.1'%3E%3Cpath d='M44 11C34-1 16-1 8 11c8 12 26 12 36 0zM10 11L0 2v18z' transform='translate(14 16)'/%3E%3C/g%3E%3Cg fill='%23c4566b' opacity='.09'%3E%3Cpath d='M44 11C34-1 16-1 8 11c8 12 26 12 36 0zM10 11L0 2v18z' transform='translate(152 82) scale(-1 1) rotate(-8)'/%3E%3C/g%3E%3Cg fill='none' stroke='%231d7a8c' opacity='.14'%3E%3Ccircle cx='72' cy='28' r='2.5'/%3E%3Ccircle cx='78' cy='18' r='1.6'/%3E%3Ccircle cx='96' cy='96' r='2.2'/%3E%3C/g%3E%3Cg fill='%23fff' opacity='.9'%3E%3Ccircle cx='46' cy='24' r='1.6'/%3E%3Ccircle cx='128' cy='90' r='1.6'/%3E%3C/g%3E%3C/svg%3E")}.cns i{position:fixed;width:clamp(110px,28vw,210px);aspect-ratio:1;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%231d7a8c' stroke-width='2'%3E%3Ccircle r='70' opacity='.32'/%3E%3Ccircle r='95' opacity='.24'/%3E%3Ccircle r='120' opacity='.16'/%3E%3Ccircle r='145' opacity='.1'/%3E%3C/g%3E%3Cpath d='M0 160Q50 130 80 80T160 0' fill='none' stroke='%23c4566b' stroke-width='3' stroke-linecap='round' opacity='.22'/%3E%3Cg fill='%23fff' stroke='%238fb2bd' stroke-width='1'%3E%3Crect x='34' y='96' width='8' height='8' transform='rotate(45 38 100)'/%3E%3Crect x='96' y='30' width='7' height='7' transform='rotate(30 99 33)'/%3E%3Crect x='62' y='62' width='6' height='6' transform='rotate(15 65 65)'/%3E%3Crect x='20' y='150' width='6' height='6' transform='rotate(45 23 153)'/%3E%3Crect x='150' y='20' width='6' height='6' transform='rotate(45 153 23)'/%3E%3Crect x='118' y='76' width='5' height='5' transform='rotate(20 120 78)'/%3E%3C/g%3E%3Cg fill='%231d7a8c' opacity='.3'%3E%3Ccircle cx='50' cy='130' r='3'/%3E%3Ccircle cx='128' cy='46' r='2.5'/%3E%3Ccircle cx='84' cy='112' r='2'/%3E%3C/g%3E%3C/svg%3E") no-repeat center/contain}
+.cns i:nth-child(1){left:0;top:56px}.cns i:nth-child(2){right:0;top:56px;transform:scaleX(-1)}.cns i:nth-child(3){left:0;bottom:0;transform:scaleY(-1)}.cns i:nth-child(4){right:0;bottom:0;transform:scale(-1)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='230'%3E%3Cg transform='translate(30 30)' fill='%231d7a8c' opacity='.18'%3E%3Cpath d='M0 12C14-6 46-6 62 12C46 30 14 30 0 12ZM2 12L-14-2v28z'/%3E%3Cpath d='M20 3Q32-8 42 4' fill='none' stroke='%231d7a8c' stroke-width='2'/%3E%3Cpath d='M44 4Q39 12 44 20' fill='none' stroke='%23fff' stroke-width='1.5'/%3E%3Ccircle cx='53' cy='10' r='2' fill='%23fff'/%3E%3C/g%3E%3Cg transform='translate(190 40)' fill='none' stroke='%23e0775f' stroke-linecap='round' opacity='.24'%3E%3Cpath d='M0 0C20-14 44-6 46 14C47 26 36 34 24 32' stroke-width='9'/%3E%3Cpath d='M24 32l-9 6M24 32l-3 9M24 32l5 8' stroke-width='3'/%3E%3Cpath d='M2-2Q-12-16-28-13M6-4Q-6-22-20-24' stroke-width='1.5'/%3E%3C/g%3E%3Cg transform='translate(70 150)' opacity='.2' fill='%23c4566b' stroke='%23c4566b' stroke-linecap='round'%3E%3Ccircle r='13' stroke='none'/%3E%3Ccircle cx='-5' cy='-2' r='1.6' fill='%23fff' stroke='none'/%3E%3Ccircle cx='5' cy='-2' r='1.6' fill='%23fff' stroke='none'/%3E%3Cpath d='M-10 10q-10 14-20 8M-4 13q-4 16-14 18M4 13q4 16 14 18M10 10q10 14 20 8' fill='none' stroke-width='4'/%3E%3C/g%3E%3Cg fill='%23c8921a' opacity='.24'%3E%3Cpath transform='translate(175 140) scale(.6)' d='M0 12C14-6 46-6 62 12C46 30 14 30 0 12ZM2 12L-14-2v28z'/%3E%3Cpath transform='translate(205 175) rotate(-15) scale(.5)' d='M0 12C14-6 46-6 62 12C46 30 14 30 0 12ZM2 12L-14-2v28z'/%3E%3C/g%3E%3Cpath transform='translate(150 200) scale(-.6 .6)' fill='%231d7a8c' opacity='.18' d='M0 12C14-6 46-6 62 12C46 30 14 30 0 12ZM2 12L-14-2v28z'/%3E%3Cg fill='%23fff' stroke='%238fb2bd'%3E%3Crect x='120' y='70' width='8' height='8' transform='rotate(45 124 74)'/%3E%3Crect x='250' y='130' width='7' height='7' transform='rotate(30 253 133)'/%3E%3Crect x='20' y='100' width='6' height='6' transform='rotate(45 23 103)'/%3E%3Crect x='260' y='20' width='6' height='6' transform='rotate(20 263 23)'/%3E%3C/g%3E%3Cg fill='none' stroke='%231d7a8c' opacity='.25'%3E%3Ccircle cx='96' cy='34' r='2.5'/%3E%3Ccircle cx='102' cy='22' r='1.6'/%3E%3Ccircle cx='160' cy='96' r='2.2'/%3E%3C/g%3E%3C/svg%3E") 0 0/300px 230px}h2::after{content:"";display:block;width:130px;height:14px;margin-top:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='14'%3E%3Cpath d='M0 7q8-8 16 0t16 0 16 0 16 0 16 0 16 0' fill='none' stroke='%231d7a8c' stroke-width='2'/%3E%3Crect x='116' y='3' width='8' height='8' transform='rotate(45 120 7)' fill='%23fff' stroke='%231d7a8c'/%3E%3C/svg%3E") no-repeat}
+.panel h3::before{content:"";display:inline-block;width:26px;height:22px;margin-right:8px;vertical-align:-3px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 24'%3E%3Crect x='11' y='3' width='13' height='13' transform='rotate(45 17.500 9.500)' fill='%23fff' stroke='%231d7a8c' stroke-width='2'/%3E%3Cpath d='M12 9.500h11' stroke='%231d7a8c' opacity='.4'/%3E%3C/svg%3E") no-repeat center/contain}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Cg fill='%23fff'%3E%3Crect x='30' y='24' width='9' height='9' transform='rotate(45 34 28)' opacity='.5'/%3E%3Crect x='120' y='50' width='7' height='7' transform='rotate(30 123 53)' opacity='.4'/%3E%3Crect x='170' y='20' width='6' height='6' transform='rotate(45 173 23)' opacity='.45'/%3E%3Crect x='70' y='100' width='8' height='8' transform='rotate(20 74 104)' opacity='.35'/%3E%3Crect x='150' y='110' width='6' height='6' transform='rotate(45 153 113)' opacity='.4'/%3E%3C/g%3E%3C/svg%3E") 0 0/200px 150px}
+.wv{position:relative}
+.wv::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='16'%3E%3Cpath d='M6 8C10 1 20 1 24 8C20 15 10 15 6 8ZM6 8L1 3v10z' fill='%231d7a8c' opacity='.6'/%3E%3Cpath transform='translate(110 0) scale(-1 1) translate(-30 0)' d='M6 8C10 1 20 1 24 8C20 15 10 15 6 8ZM6 8L1 3v10z' fill='%23c4566b' opacity='.5'/%3E%3C/svg%3E") repeat-x center/auto 16px}
+.hero h1{font-size:clamp(46px,12vw,104px);letter-spacing:-.02em}
+.hero p{max-width:34ch;font-size:19px;margin:16px 0 26px;color:#cfe3e3}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--brine);color:#fff;text-decoration:none;font-weight:600;border:0;font:600 16px Karla,sans-serif;cursor:pointer}
+.btn.alt{background:transparent;border:1.5px solid currentColor}
+.btn:focus-visible,.t:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero svg{display:block;width:100%;height:auto;margin-top:30px}
+section{padding:60px 0}
+#sal{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='100'%3E%3Crect x='4' y='4' width='72' height='42' rx='6' fill='%231d7a8c' opacity='.08'/%3E%3Crect x='84' y='4' width='72' height='42' rx='6' fill='%23c4566b' opacity='.09'/%3E%3Crect x='4' y='54' width='72' height='42' rx='6' fill='%23c4566b' opacity='.07'/%3E%3Crect x='84' y='54' width='72' height='42' rx='6' fill='%231d7a8c' opacity='.09'/%3E%3C/svg%3E")}
+.wv{height:22px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='22'%3E%3Cpath d='M0 11q10-10 20 0t20 0 20 0 20 0' fill='none' stroke='%231d7a8c' stroke-width='2.5' opacity='.5'/%3E%3C/svg%3E") repeat-x center}
+h2{font-size:clamp(30px,6vw,44px);margin-bottom:12px}
+.lead{max-width:60ch;color:var(--muted)}
+.twin{display:grid;gap:22px;grid-template-columns:1fr 1fr;margin-top:26px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px 26px 6px 26px;padding:24px}
+.panel h3{font-size:24px;margin-bottom:6px}
+.menu dl{margin:14px 0 0}
+.menu dt{font-weight:600;margin-top:14px}
+.menu dd{margin:0;color:var(--muted);font-size:15px}.mrow{display:grid;grid-template-columns:1fr auto;gap:12px;padding:8px 0;border-bottom:1px dotted var(--line)}.mrow small{display:block;color:var(--muted);font-size:13px}.mrow b{font-weight:600;white-space:nowrap}.mrow.two{grid-template-columns:1fr 78px 78px;text-align:right}.mh{color:var(--muted);font-size:13px}
+.note{font-size:14px;color:var(--muted);margin-top:18px}
+.booking{background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='24'%3E%3Cpath d='M0 12q10-10 20 0t20 0 20 0 20 0' fill='none' stroke='%231d7a8c' stroke-width='2' opacity='.13'/%3E%3C/svg%3E");border-block:1px solid var(--line)}
+.ctl{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
+label{display:flex;flex-direction:column;font-size:14px;color:var(--muted);gap:4px}
+select,input{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;min-width:140px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-bottom:14px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;vertical-align:-2px}
+.plan{border:2px solid var(--line);border-radius:18px;padding:18px;background:var(--bg)}
+.zone{margin-bottom:6px;font-family:Fraunces,Georgia,serif;font-size:19px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:12px;margin:10px 0 22px}
+.t{border:2.5px solid var(--free);background:var(--surface);color:var(--ink);border-radius:50%;aspect-ratio:1;font:600 15px/1.2 Karla,sans-serif;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px}
+.t small{font-weight:400;font-size:12px;color:var(--muted)}
+.t.sq{border-radius:14px;aspect-ratio:1.5}
+.t.res{border-color:var(--res);background:color-mix(in srgb,var(--res) 18%,var(--surface))}
+.t.occ{border-color:var(--occ);background:color-mix(in srgb,var(--occ) 20%,var(--surface))}
+.t:disabled{cursor:not-allowed;opacity:.75}
+.t.small{border-style:dashed;opacity:.45;cursor:not-allowed}
+.t.sel{background:var(--free);color:#fff;transform:scale(1.06)}
+.t.sel small{color:#fff}
+.sum{margin-top:18px;padding:16px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+footer{background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.4) 0 1.5px,transparent 2.2px) 0 0/90px 90px,radial-gradient(circle at 70% 65%,rgba(255,255,255,.25) 0 1px,transparent 1.8px) 0 0/130px 130px,var(--sea);color:var(--sea-ink);padding:40px 0;text-align:center}
+footer a{font-size:26px;font-family:Fraunces,Georgia,serif}
+@media(max-width:640px){.twin{grid-template-columns:1fr}nav div{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.t{transition:none}}
+.ok{color:var(--free);font-weight:600}.ko{color:var(--occ);font-weight:600}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js"></script>
+</head>
+<body>
+<div class="cns" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<nav><div class="wrap"><b>La Sal</b><div><a href="#sal">La sal</a><a href="#carta">Carta</a><a href="#reservas">Reservas</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<h1>La Sal</h1>
+<p>Pulpo, marisco y tapas con el sabor de la salina isleña. Paseo de las Flores, 13, Isla Cristina.</p>
+<div class="btns"><a class="btn" href="tel:+34662159386">Llamar al 662 15 93 86</a><a class="btn alt" href="#reservas">Elegir mesa</a></div>
+</div>
+<svg viewBox="0 0 960 150" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 150V92l70-48 60 48 70-34 60 34 90-56 80 56 80-40 70 40 90-52 70 52 60-30 80 30 70-44 80 44V150Z" fill="#f3f6f5" opacity=".95"/>
+<path d="M0 118q60-20 120 0t120 0 120 0 120 0 120 0 120 0 120 0 120 0V150H0Z" fill="#1d7a8c"/>
+<path d="M0 134q60-16 120 0t120 0 120 0 120 0 120 0 120 0 120 0 120 0V150H0Z" fill="#164f64"/>
+</svg></header><section id="sal"><div class="wrap">
+<h2>De la salina a la mesa</h2>
+<p class="lead">En Isla Cristina la sal es oficio y paisaje: montones blancos bajo el sol de las marismas. Aquí cocinamos con ella lo que mejor sabe hacer, que es respetar el producto.</p>
+<div class="twin"><div class="panel"><h3>Pulpo y marisco</h3><p>El pulpo es la estrella de la casa: a la gallega, en croquetas, light o con huevos rotos. Y gambas, coquinas y almejas del día.</p></div><div class="panel"><h3>Tapas y carnes ibéricas</h3><p>Jamón de bellota, carrillada en salsa, presa y lomo ibéricos en chapatita. Cocina de siempre para compartir.</p></div></div></div></section>
+
+<div class="wv" aria-hidden="true"></div><section id="carta" class="menu" style="padding-top:0"><div class="wrap"><h2>La carta</h2><p class="lead">Tapas del día, montaditos y raciones. Precios con IVA incluido. Pregunta por los especiales del día.</p><div class="twin"><div class="panel"><h3>Tapas del día</h3><div class="mrow"><span>Pulpo a la gallega</span><b>4,00 €</b></div><div class="mrow"><span>Ensaladilla de pulpo</span><b>2,20 €</b></div><div class="mrow"><span>Milhojas de berenjenas<small>con queso de cabra</small></span><b>3,20 €</b></div><div class="mrow"><span>Croquetas de pulpo<small>3 unidades</small></span><b>2,20 €</b></div><div class="mrow"><span>Croquetas de jamón<small>3 unidades, de jamón ibérico de bellota</small></span><b>2,20 €</b></div><div class="mrow"><span>Albóndigas de choco</span><b>2,40 €</b></div><div class="mrow"><span>Longuerones en salsa</span><b>2,40 €</b></div><div class="mrow"><span>Adobo</span><b>2,00 €</b></div><div class="mrow"><span>Tortillitas de camarones</span><b>2,00 €</b></div><div class="mrow"><span>Atún en tomate</span><b>2,40 €</b></div><div class="mrow"><span>Carrillada en salsa</span><b>2,40 €</b></div><div class="mrow"><span>Queso de cabra frito</span><b>3,00 €</b></div><div class="mrow"><span>Salmorejo<small>bol</small></span><b>4,00 €</b></div><div class="mrow"><span>Ensaladilla de marisco</span><b>2,20 €</b></div><div class="mrow"><span>Atún a la Dorita</span><b>2,40 €</b></div><div class="mrow"><span>Hueva de pulpo con alioli</span><b>2,00 €</b></div><div class="mrow"><span>Papas bravas</span><b>2,20 €</b></div><div class="mrow"><span>Flamenquín<small>de queso de cabra con mermelada de cebolla</small></span><b>4,00 €</b></div></div><div class="panel"><h3>Montaditos</h3><div class="mrow"><span>Chapatita de jamón<small>ciabatta de jamón ibérico</small></span><b>2,50 €</b></div><div class="mrow"><span>Chapatita de queso<small>ciabatta de queso manchego</small></span><b>2,50 €</b></div><div class="mrow"><span>Chapatita de presa paleta<small>ciabatta</small></span><b>3,00 €</b></div><div class="mrow"><span>Chapatita de presa paleta<small>con jamón y queso</small></span><b>3,50 €</b></div><div class="mrow"><span>Chapatita de lomo<small>ciabatta</small></span><b>3,00 €</b></div><div class="mrow"><span>Chapatita de lomo<small>con jamón y queso</small></span><b>3,50 €</b></div></div><div class="panel" style="grid-column:1/-1"><h3>Platos, raciones y medias raciones</h3><div class="mrow two mh"><span></span><span>½ ración</span><span>Ración</span></div><div class="mrow two"><span>Croquetas de pulpo</span><b>4,20 €</b><b>8,00 €</b></div><div class="mrow two"><span>Croquetas de jamón</span><b>4,20 €</b><b>8,00 €</b></div><div class="mrow two"><span>Jamón de bellota</span><b>9,00 €</b><b>18,00 €</b></div><div class="mrow two"><span>Queso manchego</span><b>6,00 €</b><b>12,00 €</b></div><div class="mrow two"><span>Pulpo a la gallega</span><b>7,50 €</b><b>13,00 €</b></div><div class="mrow two"><span>Chocos fritos</span><b>6,00 €</b><b>11,00 €</b></div><div class="mrow two"><span>Puntillitas</span><b>7,00 €</b><b>12,00 €</b></div><div class="mrow two"><span>Calamares fritos</span><b>6,00 €</b><b>11,00 €</b></div><div class="mrow two"><span>Acedías</span><b>6,00 €</b><b>10,00 €</b></div><div class="mrow two"><span>Boquerones</span><b>4,50 €</b><b>8,00 €</b></div><div class="mrow two"><span>Gambas cocidas o a la plancha (250 g)</span><b>–</b><b>18,00 €</b></div><div class="mrow two"><span>Coquinas al ajillo (250 g)</span><b>–</b><b>9,00 €</b></div><div class="mrow two"><span>Almejas al ajillo (250 g)</span><b>–</b><b>12,00 €</b></div><div class="mrow two"><span>Pulpo light</span><b>7,50 €</b><b>13,00 €</b></div><div class="mrow two"><span>Carrillada en salsa</span><b>5,00 €</b><b>9,00 €</b></div><div class="mrow two"><span>Huevos rotos con pulpo al ajillo</span><b>–</b><b>10,00 €</b></div></div></div></div></section><div class="wv" aria-hidden="true"></div>
+<section id="reservas" class="booking"><div class="wrap">
+<h2>Elige tu mesa</h2>
+<p class="lead">Escoge día, turno y comensales. Las mesas en verde están libres a esa hora y las rojas ya están ocupadas.</p>
+<div class="ctl">
+<label>Día<input type="date" id="d"></label>
+<label>Hora<select id="h"><optgroup label="Comida"><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option></optgroup><optgroup label="Cena"><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option><option>23:00</option><option>23:30</option></optgroup></select></label>
+<label>Comensales<select id="p"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+</div>
+<div class="legend"><span><i style="background:var(--free)"></i>Libre</span><span><i style="background:var(--occ)"></i>Ocupada</span></div>
+<div class="plan"><div class="zone">Comedor</div><div class="grid" id="g1"></div><div class="zone">Terraza junto a la ría</div><div class="grid" id="g2"></div></div>
+<div class="sum" id="sum" aria-live="polite"></div>
+<p class="note">Cada reserva bloquea la mesa durante 1 h 30 min desde la hora elegida.</p>
+</div></section>
+
+<footer><div class="wrap"><p>Restaurante La Sal · Paseo de las Flores, 13, Isla Cristina (Huelva)</p><p style="font-size:15px">Abierto todos los días: de 12:00 a 16:00 y de 20:00 a 24:00</p><a href="tel:+34662159386">662 15 93 86</a></div></footer>
+
+<script>
+const CFG={url:'https://ezggvgufiidtdktmnrqq.supabase.co',key:'sb_publishable_jG4GhowqpnkPQ1p4w4NQBw_Ijaz_b9W'};
+const sb=(window.supabase&&!CFG.url.startsWith('PEGA'))?supabase.createClient(CFG.url,CFG.key):null;
+const T=[{z:1,n:1,s:2},{z:1,n:2,s:2},{z:1,n:3,s:4},{z:1,n:4,s:4},{z:1,n:5,s:4},{z:1,n:6,s:6},{z:1,n:7,s:6},{z:2,n:8,s:2},{z:2,n:9,s:4},{z:2,n:10,s:4},{z:2,n:11,s:6},{z:2,n:12,s:8}];
+const $=id=>document.getElementById(id);
+let sel=null,occ={};
+const today=new Date();
+const iso=x=>x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');
+$('d').value=iso(today);$('d').min=iso(today);
+const fmt=()=>$('d').value.split('-').reverse().join('/');
+function render(){
+ const p=+$('p').value;$('g1').innerHTML='';$('g2').innerHTML='';
+ T.forEach(t=>{
+  const o=!!occ[t.n],small=t.s<p,b=document.createElement('button');
+  b.className='t'+(t.s>=6?' sq':'')+(o?' occ':'')+(small&&!o?' small':'')+(sel===t.n?' sel':'');
+  b.disabled=o||small||!sb;
+  b.innerHTML='Mesa '+t.n+'<small>'+(o?'ocupada':small?'pequeña':t.s+' pers.')+'</small>';
+  b.setAttribute('aria-label','Mesa '+t.n+', '+t.s+' personas, '+(o?'ocupada':'libre'));
+  b.onclick=()=>{sel=t.n;render();showSum()};
+  $(t.z===1?'g1':'g2').appendChild(b)})}
+function showSum(msg,cls){
+ const el=$('sum');
+ if(msg){el.innerHTML='<span class="'+(cls||'')+'"></span>';el.firstChild.textContent=msg;return}
+ if(!sb){el.textContent='El sistema de reservas aún no está conectado. Llama al 662 15 93 86.';return}
+ if(!sel){el.textContent='Toca una mesa libre para reservarla.';return}
+ const t=T.find(x=>x.n===sel);
+ el.innerHTML='<b>Mesa '+sel+'</b> ('+(t.z===1?'comedor':'terraza')+'), '+$('p').value+' personas, '+fmt()+' a las '+$('h').value+'. La mesa queda reservada 1 h 30 min.<div class="ctl"><label>Tu nombre<input id="nm" autocomplete="name"></label><label>Teléfono<input id="tl" type="tel" autocomplete="tel"></label></div><div class="btns"><button class="btn" id="bk">Confirmar reserva</button><a class="btn alt" href="tel:+34662159386">Llamar</a></div>';
+ $('bk').onclick=book}
+async function load(keep){
+ if(!sb){render();showSum();return} const {data,error}=await sb.rpc('mesas_estado',{p_fecha:$('d').value,p_hora:$('h').value});
+ if(error){showSum('No se puede consultar la disponibilidad ahora. Llama al 662 15 93 86.','ko');return}
+ occ={};data.forEach(r=>occ[r.mesa_id]=r.ocupada);
+ const before=sel;
+ if(sel&&(occ[sel]||T.find(x=>x.n===sel).s<+$('p').value))sel=null;
+ render();
+ if(!keep||before!==sel)showSum()}
+const MSG={ocupada:'Esa mesa acaba de ser reservada por otra persona. Elige otra.',pasada:'Esa hora ya ha pasado. Elige otra.',capacidad:'La mesa es pequeña para tu grupo.',datos:'Revisa tu nombre y tu teléfono.',fuera_horario:'Elige una hora dentro del horario del restaurante.',mesa_invalida:'Mesa no válida.'};
+async function book(){
+ const n=$('nm').value.trim(),tel=$('tl').value.trim();
+ if(n.length<2||tel.replace(/\D/g,'').length<9){showSum(MSG.datos,'ko');return}
+ $('bk').disabled=true;
+ const mesa=sel,{data,error}=await sb.rpc('reservar_mesa',{p_mesa:mesa,p_fecha:$('d').value,p_hora:$('h').value,p_personas:+$('p').value,p_nombre:n,p_telefono:tel});
+ if(!error&&data==='ok'){sel=null;await load(true);showSum('Reserva confirmada: mesa '+mesa+', '+fmt()+' a las '+$('h').value+'. ¡Te esperamos!','ok');return}
+ sel=null;await load(true);
+ showSum(error?'No se pudo reservar. Inténtalo de nuevo o llama al 662 15 93 86.':(MSG[data]||'No se pudo reservar.'),'ko')}
+['d','h','p'].forEach(i=>$(i).addEventListener('change',()=>load(false)));
+load(false);setInterval(()=>load(true),20000);
+</script>
+</body>
+</html>
