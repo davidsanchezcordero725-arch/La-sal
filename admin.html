@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Sal · Panel de reservas</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js"></script>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;margin:0;background:#f3f6f5;color:#0c2c3f}
+main{max-width:640px;margin:0 auto;padding:20px}
+h1{font-size:24px;margin:0 0 14px}
+input,select,button{font:inherit;padding:10px;border-radius:10px;border:1.5px solid #c5d4d1;background:#fff;color:inherit}
+button{background:#0c2c3f;color:#fff;border:0;cursor:pointer}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;align-items:end}
+.card{background:#fff;border:1px solid #d3dedc;border-radius:12px;padding:12px;margin:8px 0;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.card button{background:#b3413b}
+#err{color:#b3413b}
+</style></head><body>
+<main id="login"><h1>La Sal · Panel</h1>
+<div class="row"><input id="em" type="email" placeholder="Correo" autocomplete="username"><input id="pw" type="password" placeholder="Contraseña" autocomplete="current-password"><button id="go">Entrar</button></div><p id="err"></p></main>
+<main id="app" hidden><h1>Reservas</h1>
+<div class="row"><input id="d" type="date"><button id="out" style="background:#5b7280">Salir</button></div>
+<div id="list"></div>
+<h2>Marcar una mesa como ocupada</h2>
+<div class="row"><select id="m"></select><input id="t" type="time" step="900"><input id="pe" type="number" min="1" max="12" value="2" style="width:70px"><button id="add">Ocupar 1 h 30</button></div></main>
+<script>
+const CFG={url:'https://ezggvgufiidtdktmnrqq.supabase.co',key:'sb_publishable_jG4GhowqpnkPQ1p4w4NQBw_Ijaz_b9W'};
+const sb=supabase.createClient(CFG.url,CFG.key);
+const $=id=>document.getElementById(id);
+const pad=n=>String(n).padStart(2,'0');
+const x=new Date();$('d').value=x.getFullYear()+'-'+pad(x.getMonth()+1)+'-'+pad(x.getDate());
+for(let i=1;i<=12;i++)$('m').add(new Option('Mesa '+i,i));
+function show(on){$('login').hidden=on;$('app').hidden=!on;if(on)list()}
+sb.auth.getSession().then(({data})=>show(!!data.session));
+$('go').onclick=async()=>{const {error}=await sb.auth.signInWithPassword({email:$('em').value,password:$('pw').value});$('err').textContent=error?'Correo o contraseña incorrectos.':'';if(!error)show(true)};
+$('out').onclick=async()=>{await sb.auth.signOut();show(false)};
+$('d').onchange=list;
+async function list(){
+ const d=$('d').value,box=$('list');box.textContent='';
+ const {data,error}=await sb.from('reservas').select('*').eq('estado','confirmada').gte('inicio',d+'T00:00:00').lt('inicio',d+'T23:59:59').order('inicio');
+ if(error){box.textContent='No se pudo cargar.';return}
+ if(!data.length){box.textContent='No hay reservas ese día.';return}
+ data.forEach(r=>{
+  const c=document.createElement('div');c.className='card';
+  const i=document.createElement('div');
+  i.textContent=r.inicio.slice(11,16)+' · Mesa '+r.mesa_id+' · '+r.personas+' pers. · '+r.nombre+' · '+r.telefono;
+  const b=document.createElement('button');b.textContent='Cancelar';
+  b.onclick=async()=>{if(confirm('¿Cancelar esta reserva?')){await sb.from('reservas').update({estado:'cancelada'}).eq('id',r.id);list()}};
+  c.append(i,b);box.append(c)})}
+$('add').onclick=async()=>{
+ if(!$('t').value)return;
+ const {error}=await sb.from('reservas').insert({mesa_id:+$('m').value,inicio:$('d').value+'T'+$('t').value+':00',personas:+$('pe').value,nombre:'En sala',telefono:'-'});
+ if(error)alert('Esa mesa ya está ocupada a esa hora.');list()};
+</script></body></html>
